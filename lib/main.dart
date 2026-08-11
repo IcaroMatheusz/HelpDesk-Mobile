@@ -29,19 +29,73 @@ class MyApp extends StatelessWidget {
 
               const SizedBox(height: 20), //funciona a margin
 
-              const Text(
-                // outro texto
-                'Chamados em aberto: 5',
-              ),
+              const Text('Chamados em aberto: 5'),
+
+              const SizedBox(height: 20), //funciona a margin
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(child: const Text('🟢 2')),
+                  Expanded(
+                    child: Container(
+                      height: 80,
+                      padding: EdgeInsets.all(5),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(color: Colors.blueGrey),
+                      child: const Text(
+                        'FINALIZADOS: 2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
 
                   const SizedBox(width: 20),
 
-                  Container(child: const Text('🔴 5')),
+                  Expanded(
+                    child: Container(
+                      height: 80,
+                      padding: EdgeInsets.all(5),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(color: Colors.blueGrey),
+                      child: const Text(
+                        'NÃO FINALIZADOS: 5',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 20), //funciona a margin
+
+              const Text(
+                'ÚLTIMOS CHAMADOS',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueGrey,
+                ),
+              ),
+
+              Column(
+                children: [
+                  Container(
+                    height: 80,
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(color: Colors.blueGrey),
+                    child: const Text('Impressora não funciona'),
+                  ),
+
+                  const SizedBox(height: 20), //funciona a margin
+
+                  Container(
+                    height: 80,
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(color: Colors.blueGrey),
+                    child: const Text('Sistema fora do ar'),
+                  ),
                 ],
               ),
             ],
