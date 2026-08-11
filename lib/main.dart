@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/chamado_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,23 +80,11 @@ class MyApp extends StatelessWidget {
 
               Column(
                 children: [
-                  Container(
-                    height: 80,
-                    padding: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(color: Colors.blueGrey),
-                    child: const Text('Impressora não funciona'),
-                  ),
+                  ChamadoCard(titulo: 'Impressora com erro'),
 
                   const SizedBox(height: 20), //funciona a margin
 
-                  Container(
-                    height: 80,
-                    padding: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(color: Colors.blueGrey),
-                    child: const Text('Sistema fora do ar'),
-                  ),
+                  ChamadoCard(titulo: 'Sistema com problemas no acesso'),
                 ],
               ),
             ],
