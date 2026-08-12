@@ -80,11 +80,17 @@ class MyApp extends StatelessWidget {
 
               Column(
                 children: [
-                  ChamadoCard(titulo: 'Impressora com erro'),
+                  ChamadoCard(
+                    titulo: 'Impressora com erro',
+                    empresa: 'Empresa X',
+                  ),
 
                   const SizedBox(height: 20), //funciona a margin
 
-                  ChamadoCard(titulo: 'Sistema com problemas no acesso'),
+                  ChamadoCard(
+                    titulo: 'Sistema com problemas no acesso',
+                    empresa: 'Empresa Y',
+                  ),
                 ],
               ),
             ],
