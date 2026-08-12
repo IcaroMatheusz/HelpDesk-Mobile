@@ -83,6 +83,7 @@ class MyApp extends StatelessWidget {
                   ChamadoCard(
                     titulo: 'Impressora com erro',
                     empresa: 'Empresa X',
+                    status: StatusChamado.aberto,
                   ),
 
                   const SizedBox(height: 20), //funciona a margin
@@ -90,6 +91,7 @@ class MyApp extends StatelessWidget {
                   ChamadoCard(
                     titulo: 'Sistema com problemas no acesso',
                     empresa: 'Empresa Y',
+                    status: StatusChamado.resolvido,
                   ),
                 ],
               ),
